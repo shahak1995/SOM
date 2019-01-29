@@ -76,34 +76,78 @@ class SinglePostcodeService
   end
 
   def retrieve_incode
-    retrieve_result['region']
+    retrieve_result['incode']
   end
 
   def retrieve_outcode
-    retrieve_result['region']
+    retrieve_result['outcode']
   end
 
-  def retrieve_region
-    retrieve_result['region']
+  def retrieve_constituency
+    retrieve_result['parliamentary_constituency']
   end
 
-  def retrieve_region
-    retrieve_result['region']
+  def retrieve_admin_district
+    retrieve_result['admin_district']
   end
 
-  def retrieve_region
-    retrieve_result['region']
+  def retrieve_parish
+    retrieve_result['parish']
   end
 
-  def retrieve_region
-    retrieve_result['region']
+  def retrieve_admin_county
+    retrieve_result['admin_county']
   end
 
-  def retrieve_region
-    retrieve_result['region']
+  def retrieve_admin_ward
+    retrieve_result['admin_ward']
   end
 
-  def retrieve_region
-    retrieve_result['region']
+  def retrieve_ced
+    retrieve_result['ced']
+  end
+
+  def retrieve_ccg
+    retrieve_result['ccg']
+  end
+
+  def retrieve_nuts
+    retrieve_result['nuts']
+  end
+
+  def retrieve_codes
+    retrieve_result['codes']
+  end
+
+  def retrieve_codes_admin_district
+    retrieve_codes['admin_district']
+  end
+
+  def retrieve_codes_admin_county
+    retrieve_codes['admin_district']
+  end
+
+  def retrieve_codes_admin_district
+    retrieve_codes['admin_district']
+  end
+
+  def retrieve_codes_admin_district
+    retrieve_codes['admin_district']
+  end
+
+  def retrieve_codes_admin_district
+    retrieve_codes['admin_district']
+  end
+
+  def retrieve_codes_admin_district
+    retrieve_codes['admin_district']
+  end
+
+  def retrieve_codes_admin_district
+    retrieve_codes['admin_district']
+  end
+
+  def retrieve_codes_admin_district
+    retrieve_codes['admin_district']
   end
 end
