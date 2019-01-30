@@ -9,19 +9,19 @@ class SinglePostcodeService
 
   def single_postcode_request(postcode)
     @single_postcode_data = JSON.parse(self.class.get("/postcodes/#{postcode}").body)
-  end 
+  end
 
   def retrieve_status_code
     @single_postcode_data['status']
-  end 
+  end
 
   def print_results
     p @single_postcode_data
-  end 
+  end
 
   def retrieve_result
     @single_postcode_data['result']
-  end 
+  end
 
   def retrieve_postcode
     retrieve_result['postcode']
@@ -124,30 +124,30 @@ class SinglePostcodeService
   end
 
   def retrieve_codes_admin_county
-    retrieve_codes['admin_district']
+    retrieve_codes['admin_county']
   end
 
-  def retrieve_codes_admin_district
-    retrieve_codes['admin_district']
+  def retrieve_codes_admin_ward
+    retrieve_codes['admin_ward']
   end
 
-  def retrieve_codes_admin_district
-    retrieve_codes['admin_district']
+  def retrieve_codes_parish
+    retrieve_codes['parish']
   end
 
-  def retrieve_codes_admin_district
-    retrieve_codes['admin_district']
+  def retrieve_codes_constituency
+    retrieve_codes['parliamentary_constituency']
   end
 
-  def retrieve_codes_admin_district
-    retrieve_codes['admin_district']
+  def retrieve_codes_ccg
+    retrieve_codes['ccg']
   end
 
-  def retrieve_codes_admin_district
-    retrieve_codes['admin_district']
+  def retrieve_codes_ced
+    retrieve_codes['ced']
   end
 
-  def retrieve_codes_admin_district
-    retrieve_codes['admin_district']
+  def retrieve_codes_nuts
+    retrieve_codes['nuts']
   end
 end

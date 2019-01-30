@@ -83,16 +83,16 @@ describe Postcodesio do
       expect(@single_postcode_service.retrieve_parish).to be_kind_of(String)
     end
 
-    it 'should be equal to null' do
-      expect(@single_postcode_service.retrieve_admin_county).to eq 'null'
+    it 'should be either a string data type or null' do
+      expect(@single_postcode_service.retrieve_admin_county).to be_kind_of(String).or be(nil)
     end
 
     it 'should retrieve the string data type of the ward field' do
       expect(@single_postcode_service.retrieve_admin_ward).to be_kind_of(String)
     end
 
-    it 'should be equal to null' do
-      expect(@single_postcode_service.retrieve_ced).to eq 'null'
+    it 'should be either a string data type or null' do
+      expect(@single_postcode_service.retrieve_ced).to be_kind_of(String).or be(nil)
     end
 
     it 'should retrieve the string data type of the ccg field' do
@@ -109,6 +109,34 @@ describe Postcodesio do
 
     it 'should retrieve a string data type from the district field within the codes' do
       expect(@single_postcode_service.retrieve_codes_admin_district).to be_kind_of(String)
+    end
+
+    it 'should retrieve a string data type from the county field within the codes' do
+      expect(@single_postcode_service.retrieve_codes_admin_county).to be_kind_of(String)
+    end
+
+    it 'should retrieve a string data type from the ward field within the codes' do
+      expect(@single_postcode_service.retrieve_codes_admin_ward).to be_kind_of(String)
+    end
+
+    it 'should retrieve a string data type from the parish field within the codes' do
+      expect(@single_postcode_service.retrieve_codes_parish).to be_kind_of(String)
+    end
+
+    it 'should retrieve a string data type from the constituency field within the codes' do
+      expect(@single_postcode_service.retrieve_codes_constituency).to be_kind_of(String)
+    end
+
+    it 'should retrieve a string data type from the ccg field within the codes' do
+      expect(@single_postcode_service.retrieve_codes_ccg).to be_kind_of(String)
+    end
+
+    it 'should retrieve a string data type from the ced field within the codes' do
+      expect(@single_postcode_service.retrieve_codes_ced).to be_kind_of(String)
+    end
+
+    it 'should retrieve a string data type from the nuts field within the codes' do
+      expect(@single_postcode_service.retrieve_codes_nuts).to be_kind_of(String)
     end
   end
 end
